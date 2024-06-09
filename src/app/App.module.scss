@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=LXGW+WenKai+TC&display=swap');
+
+body {
+  background-image: url('./papyrus.jpg');
+  background-size: cover;
+  font-family: 'LXGW WenKai TC', cursive;
+  font-weight: 700;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.wrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.damage {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.armor {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

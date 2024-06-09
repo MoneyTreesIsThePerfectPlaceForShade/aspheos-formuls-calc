@@ -1,9 +1,7 @@
-import {Suspense} from 'react';
 import {createRoot} from 'react-dom/client';
-import {Provider} from 'react-redux';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import {App, store} from '@/app';
-import {About, ErrorPage} from '@/pages';
+
+import {App} from '@/app';
 
 const root = document.getElementById('root');
 
@@ -19,36 +17,15 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/about',
-        element: (
-          // Suspense нужен для индикации загрузки
-          <Suspense fallback={'Loading...'}>
-            <About />
-          </Suspense>
-        )
-      },
-      {
         path: '/page1',
         element: <h1>PAGE 1</h1>
       },
       {
         path: '/page2',
         element: <h1>PAGE 2</h1>
-      },
-      {
-        path: '*',
-        element: (
-          <Suspense fallback={'Loading...'}>
-            <ErrorPage />
-          </Suspense>
-        )
       }
     ]
   }
 ]);
 
-container.render(
-  <Provider store={store}>
-    <RouterProvider router={router} />
-  </Provider>
-);
+container.render(<RouterProvider router={router} />);
