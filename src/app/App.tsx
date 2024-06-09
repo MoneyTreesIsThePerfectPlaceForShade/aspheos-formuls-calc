@@ -40,7 +40,7 @@ export const App = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.damage}>
+        <div className={styles.formuls}>
           <div>
             <div>
               Множ. оружия Ат
@@ -86,7 +86,7 @@ export const App = () => {
           </div>
           <div>Урон равен {damage()}</div>
         </div>
-        <div className={styles.armor}>
+        <div className={styles.formuls}>
           <div>
             <div>
               Множ. брони Защ
