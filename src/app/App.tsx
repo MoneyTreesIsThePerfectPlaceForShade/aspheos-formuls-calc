@@ -21,7 +21,7 @@ export const App = () => {
   };
 
   const damage = () => {
-    return weaponFactor * (diceSum / 10);
+    return (weaponFactor * (diceSum / 10)).toFixed(2);
   };
 
   const armorDiceCounter = () => {
@@ -29,7 +29,7 @@ export const App = () => {
   };
 
   const armor = () => {
-    return armormFactor * (diceArSum / 10);
+    return (armormFactor * (diceArSum / 10)).toFixed(2);
   };
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export const App = () => {
               />
             </div>
           </div>
-          <div className={styles.action}>Для урона нужно бросить {damageDiceCounter()} куб(ов)</div>
+          <div className={styles.action}>Для урона нужно бросить {damageDiceCounter()} куб(а/ов)</div>
           <div>
             Сумма кубов{' '}
             <input
@@ -109,7 +109,7 @@ export const App = () => {
               />
             </div>
             <div>
-              Знание защиты защ
+              Знание защиты Защ
               <input
                 type="number"
                 value={knowledgeArFactor === 0 ? '' : knowledgeArFactor}
@@ -119,7 +119,7 @@ export const App = () => {
               />
             </div>
           </div>
-          <div className={styles.action}>Для защиты нужно бросить {armorDiceCounter()} куб(ов)</div>
+          <div className={styles.action}>Для защиты нужно бросить {armorDiceCounter()} куб(а/ов)</div>
           <div>
             Сумма кубов{' '}
             <input
@@ -133,7 +133,7 @@ export const App = () => {
           <div>Защита равна {armor()}</div>
         </div>
       </div>
-      <div className={styles.finale}>Итоговый урон = {damageFinale - armorFinale}</div>
+      <div className={styles.finale}>Итоговый урон = {(damageFinale - armorFinale).toFixed(2)}</div>
     </div>
   );
 };
