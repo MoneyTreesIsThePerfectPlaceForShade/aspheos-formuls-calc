@@ -73,7 +73,7 @@ export const App = () => {
               />
             </div>
           </div>
-          <div>Для урона нужно бросить {damageDiceCounter()} куб(ов)</div>
+          <div className={styles.action}>Для урона нужно бросить {damageDiceCounter()} куб(ов)</div>
           <div>
             Сумма кубов{' '}
             <input
@@ -119,7 +119,7 @@ export const App = () => {
               />
             </div>
           </div>
-          <div>Для защиты нужно бросить {armorDiceCounter()} куб(ов)</div>
+          <div className={styles.action}>Для защиты нужно бросить {armorDiceCounter()} куб(ов)</div>
           <div>
             Сумма кубов{' '}
             <input

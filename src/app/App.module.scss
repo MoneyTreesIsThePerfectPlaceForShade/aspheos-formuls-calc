@@ -21,7 +21,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1800px;
+  max-width: 1800px;
   display: flex;
   gap: 100px;
   justify-content: center;
@@ -51,5 +51,9 @@ body {
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+  }
+
+  .action {
+    max-width: 200px;
   }
 }
